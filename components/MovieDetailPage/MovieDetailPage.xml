@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="MovieDetailPage" extends="Group" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<script type="text/brightscript" uri="pkg:/components/MovieDetailPage/MovieDetailPage.brs" />
+	<script type="text/brightscript" uri="pkg:/source/utills.brs"/>
+    <script type="text/brightscript" uri="pkg:/source/ApiCenter.brs"/>
+    <script type="text/brightscript" uri="pkg:/locale/default/fonts/fonts.brs"/>
+
+    <interface>
+      <field id="movieResponse" type="assocArray" alwaysNotify="true"/>
+      <field id="contentId" type="string" alwaysNotify="true"/>
+      <field id="showHome" type="Boolean" alwaysNotify="true"/>
+      <field id="showPlayer" type="Boolean" alwaysNotify="true"/>
+    </interface>
+	<children>
+		<Rectangle  width="1920" height="1080" color="#000000">			
+			<poster id="bgImg" loadDisplayMode="scaleToFill" loadSync="true" visible="false"
+			failedBitmapUri="pkg://locale/default/images/splash_fhd.png"
+            loadingBitmapUri="pkg://locale/default/images/splash_fhd.png"> 
+			<navBar id="navBar" visible="true" />
+			<poster id="contentImg" loadDisplayMode="scaleToFill" loadSync="true" 
+			failedBitmapUri="pkg://locale/default/images/icon_focus_fhd.png"
+            loadingBitmapUri="pkg://locale/default/images/icon_focus_fhd.png"/> 
+			<Label id="title" color="#000000"/>
+			<Rectangle id="desBg" opacity="0.9" color="#000000">	
+				<Label id="desc" wrap ="true" horizAlign="left" lineSpacing="1" maxLines ="9"/>
+			</Rectangle>
+			 <Rectangle id="trailerButton" color="#cd1024" width="350" height="80">
+			     <Poster id="trailerIcon" uri="pkg:/locale/default/images/play_icon.png" width="40" height="40" translation="[20,18]"/>
+			     <Label id="trailerText" horizAlign="center" vertAlign="center" color="#ffffff" text="Play trailer" width="350" height="80"/>
+		     </Rectangle>
+			</poster>
+	    </Rectangle>
+	</children>
+</component>

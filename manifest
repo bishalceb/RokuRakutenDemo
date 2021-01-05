@@ -1,0 +1,15 @@
+title=Rakuten Tv
+major_version=1
+minor_version=0
+build_version=0
+mm_icon_focus_hd=pkg:/locale/default/images/icon_focus_hd.png
+mm_icon_focus_sd=pkg:/locale/default/images/icon_focus_sd.png
+mm_icon_focus_fhd=pkg:/locale/default/images/icon_focus_fhd.png
+splash_screen_fhd=pkg:/locale/default/images/splash_fhd.png
+splash_screen_hd=pkg:/locale/default/images/splash_hd.png
+splash_screen_sd=pkg:/locale/default/images/splash_sd.png
+splash_color=#000000
+splash_min_time=250
+ui_resolutions=FHD,SD
+splash_rsg_optimization=1
+supports_input_launch=1

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="navBar" extends="Group" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<script type="text/brightscript" uri="pkg:/components/navBar/navBar.brs" />
+	<script type="text/brightscript" uri="pkg:/source/utills.brs"/>
+	<children>
+		<Rectangle id="menuBg" color="#000000" opacity="0.9">
+            	<poster id="logo" loadDisplayMode="scaleToFit" loadSync="true"/>
+        </Rectangle>
+	</children>
+</component>

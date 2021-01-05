@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="HomeScreen" extends="Group" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<script type="text/brightscript" uri="pkg:/components/HomeScreen/homeScreen.brs"/>
+	<script type="text/brightscript" uri="pkg:/source/utills.brs"/>
+    <script type="text/brightscript" uri="pkg:/source/ApiCenter.brs"/>
+    <script type="text/brightscript" uri="pkg:/locale/default/fonts/fonts.brs"/>
+
+    <interface>
+      <field id="homeListResponse" type="roArray" alwaysNotify="true"/>
+      <field id="contentId" type="string" alwaysNotify="true"/>
+      <field id="isExitApp" type="boolean" alwaysNotify="true"/>
+      <field id="showMovie" type="Boolean" alwaysNotify="true"/>
+      <field id="showPlayer" type="Boolean" alwaysNotify="true"/>
+    </interface>
+	<children>
+		<poster id="backGroundImage" 
+		failedBitmapUri="pkg://locale/default/images/splash_fhd.png"
+        loadingBitmapUri="pkg://locale/default/images/splash_fhd.png"
+		loadDisplayMode="scaleToFit" loadSync="true" >
+          <Rectangle  width="1920" height="1080" color="#000000" opacity ="0.5"/>
+            <poster id="bgImageMasking" loadDisplayMode="scaleToFit" loadSync="true">           
+                  <RowList
+                    id="RowList"
+                    numRows="2"
+                    rowFocusAnimationStyle="floatingFocus"
+                    rowItemSpacing="[[30,0]]"
+                    itemSpacing="[0,80]"
+                    rowSpacings="[80,80,80,80]"
+                    rowLabelOffset="[[0,10],[0,10],[0,10],[0,10],[0,10]]"
+                    showRowLabel="[true,true]"
+                    inheritParentOpacity="false"/>
+              </poster>	
+              <navBar id="navBar" visible="true" />
+         </poster>     
+	</children>
+</component>
